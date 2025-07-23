@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Branch</title>
+</head>
+<body>
+    <h2>Student Form</h2>
+    <form>
+        Name: <input type="text" name="name"><br><br>
+        Branch:
+        <select name="branch">
+            <option value="cse">CSE</option>
+            <option value="ece">ECE</option>
+            <option value="mech">MECH</option>
+            <option value="civil">CIVIL</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
