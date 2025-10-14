@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript function types demo</h2>
+    <button onclick="runDecleration()">Function Declaration</button>
+    <button onclick="runExpression()">Function Expression</button>
+    <button onclick="runArrow()">Function Arrow</button>
+    <button onclick="runAnonymouss()">Function Anonymous</button>
+    <button onclick="runIIFE()">Function IIFE</button>
+    <button onclick="runconstructor()">Function Constructor</button>
+    <button onclick="runGenerator()">Function Generator</button>
+    <button onclick="runAsync()">Function Async</button>
+    <div id="output"= Output will appear here....></div>
+    <script>
+        const outputDiv = document.getElementById("output");
+        function show(msg){
+            outputDiv.innerText += msg + "\n";
+        }
+        function clearoutput() {
+            outputDiv.innerText = "";
+        }
+        function calculateTotal(price, tax){
+            return price + (price * tax);
+        }
+        function runDecleration(){
+            clearoutput();
+            show("total = " + calculateTotal(100, 0.05));
+        }
+        const greetUser = function(name){
+            return Welcome, ${name}!;
+        };
+        function runExpression(){
+            clearoutput();
+            show(greetUser("jahnavi"));
+        }
+        const tasks = ["Work", "Sleep","Exercise", "Study","stress","owle"];
+        const shortTasks = tasks.filter(task => task.length <= 5);
+        function runArrow(){
+            clearoutput();
+            show("Short Tasks: " + shortTasks.join(", "));
+        }
+        function runAnonymouss(){
+            clearoutput();
+            setTimeout(function(){
+                show("Reminder: Take a break!");
+            }, 1000);
+        }
+        function runIIFE(){
+            clearoutput();
+            (function(){
+                const secretToken = "abc123";
+                show("IIFE executed securly, token hidden!");
+            })();
+        }
+        function user(name, role){
+            this.name = name;
+            this.role = role;
+        }
+        function runconstructor(){
+            clearoutput();
+            const user1 = new User("jahnavi", "Admin");
+        }      
+    </script>
+</body>
+</html>
